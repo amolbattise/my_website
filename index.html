@@ -3,70 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Amol Battise - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px 50px;
+        }
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dark-mode section {
+            background: #1e1e1e;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #333;
+            color: white;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .project {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .dark-mode .project {
+            background-color: #2c2c2c;
+        }
+        .theme-toggle {
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 10px;
+            background: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <nav>
-        <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#service">Service</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
     </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="section">
-        <div class="portfolio-container">
-            <div class="left-container">
-                <div class="content">
-                    <h2>Hi! I Am <span>Amol Battise</span></h2>
-                    <h1>Web Developer.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione necessitatibus optio perspiciatis tempore expedita earum esse assumenda tempora quod animi.</p>
-                    <div class="buttons">
-                        <a href="#" class="btn hire">Hire Me</a>
-                        <a href="#" class="btn project">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="right-container">
-                <div class="profile">
-                    <img src="amol.png" alt="Profile Image">
-                </div>
-            </div>
+    
+    <header>
+        <h1>Amol Battise</h1>
+        <p>Fresher Python Developer | Passionate About Coding</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>B.E in Electronics & Telecommunication (E&TC). Passionate about Python development and eager to learn new technologies.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Django</li>
+            <li>Data Analysis</li>
+            <li>Machine Learning</li>
+            <li>Web Development</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Library Management System</h3>
+            <p>A Python-based system with admin and user functionalities for managing books, borrowing, and returns.</p>
+        </div>
+        <div class="project">
+            <h3>Healthcare Management System</h3>
+            <p>A Django-based web application for managing healthcare records, appointments, and prescriptions.</p>
         </div>
     </section>
-
-    <!-- Work Section -->
-    <section id="work" class="section">
-        <h2>My Work</h2>
-        <p>Here are some of my recent projects and freelance work. I specialize in creating modern web applications.</p>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/amolbattise" target="_blank">amolbattise</a></p>
+        <p>Phone: [Your Phone Number]</p>
+        <p>Email: [Your Email Address]</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am a passionate web developer with experience in frontend and backend technologies.</p>
-    </section>
-
-    <!-- Project Section -->
-    <section id="project" class="section">
-        <h2>Projects</h2>
-        <p>Check out my projects, including e-commerce websites, blogs, and business portfolios.</p>
-    </section>
-
-    <!-- Services Section -->
-    <section id="service" class="section">
-        <h2>Services</h2>
-        <p>I offer website development, UI/UX design, backend integration, and SEO services.</p>
-    </section>
-
-    <script src="script.js"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            alert("Welcome to Amol Battise's Portfolio Website!");
+        });
+        
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
